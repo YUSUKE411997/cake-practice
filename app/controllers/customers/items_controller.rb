@@ -7,6 +7,7 @@ class Customers::ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @total_price = (@item.price * 1.1).to_i
+    @cart_item = CartItem.new
     
   end 
 

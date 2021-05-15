@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   namespace :customers do
     resources :items
+    resources :cart_items, only: [:create, :index, :update, :destroy]
   end
 
 end
