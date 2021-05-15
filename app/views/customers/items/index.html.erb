@@ -1,0 +1,9 @@
+<h1>商品一覧 <%= @items.count %>件</h1>
+
+
+<% @items.each do |item| %>
+<%= link_to item.item_name, customers_item_path(item.id) %>
+
+<%= item.price %>
+
+<% end %>

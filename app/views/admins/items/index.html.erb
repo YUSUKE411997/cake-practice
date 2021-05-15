@@ -1,0 +1,21 @@
+<h1>admin:index</h1>
+
+
+
+<% @items.each do |item| %>
+<%= item.id %>
+<%= item.item_name %>
+<%= item.caption %>
+<%#= item.genre.genre_name %>
+<%= item.price %>
+<% if item.is_active %>
+<p>販売中</p>
+<% else %>
+<p>販売停止中</p>
+<% end %>
+
+<% end %>
+
+
+<%=link_to "商品作成はこちら", new_admins_item_path %>
+
